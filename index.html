@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clueless - AI Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕵️ Clueless</h1>
+            <p>AI Detection System for Interview Security</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="status-panel">
+                <div class="status-item">
+                    <span class="status-label">Detection Status:</span>
+                    <span id="detection-status" class="status-value inactive">Inactive</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Threat Level:</span>
+                    <span id="threat-level" class="status-value low">Low</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Monitored Processes:</span>
+                    <span id="process-count" class="status-value">0</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-monitoring" class="btn btn-primary">Start Monitoring</button>
+                <button id="stop-monitoring" class="btn btn-secondary" disabled>Stop Monitoring</button>
+                <button id="export-report" class="btn btn-tertiary">Export Report</button>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-button active" data-tab="processes">Processes</button>
+                <button class="tab-button" data-tab="network">Network</button>
+                <button class="tab-button" data-tab="behavioral">Behavioral</button>
+                <button class="tab-button" data-tab="alerts">Alerts</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="processes-tab" class="tab-panel active">
+                    <h3>Suspicious Processes</h3>
+                    <div id="processes-list" class="data-list">
+                        <p>No suspicious processes detected.</p>
+                    </div>
+                </div>
+
+                <div id="network-tab" class="tab-panel">
+                    <h3>Network Activity</h3>
+                    <div id="network-list" class="data-list">
+                        <p>No suspicious network activity detected.</p>
+                    </div>
+                </div>
+
+                <div id="behavioral-tab" class="tab-panel">
+                    <h3>Behavioral Analysis</h3>
+                    <div id="behavioral-metrics" class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">Typing Speed Consistency:</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 0%;"></div>
+                            </div>
+                            <span class="metric-value">0%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Response Time Anomaly:</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 0%;"></div>
+                            </div>
+                            <span class="metric-value">0%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Grammar Perfection Score:</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 0%;"></div>
+                            </div>
+                            <span class="metric-value">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="alerts-tab" class="tab-panel">
+                    <h3>Security Alerts</h3>
+                    <div id="alerts-list" class="alerts">
+                        <p>No alerts at this time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

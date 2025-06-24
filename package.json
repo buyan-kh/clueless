@@ -1,0 +1,24 @@
+{
+  "name": "clueless",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^36.5.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "clipboard-event": "^1.6.0",
+    "node-key-sender": "^1.0.11",
+    "robotjs": "^0.6.0"
+  }
+}

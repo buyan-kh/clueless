@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:cluely.com)",
+      "Bash(node:*)",
+      "Bash(npm --version)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npm start)",
+      "Bash(grep:*)"
+    ],
+    "deny": []
+  }
+}
