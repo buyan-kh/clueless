@@ -93,6 +93,23 @@ function getRunningProcesses() {
       args = ["aux"];
     }
 
+    if (platform === "win32") {
+      cmd = "powershell";
+      args = ["/fo", "csv"];
+    } else {
+      args = "/fo csv";
+      cmd = "ps";
+      args = ["-aux"]
+    }
+
+    const child = spawn(cmd, args);
+    let output = "";
+    child.stdout.on("data", (data) => {
+      output += data.toString();
+    });
+    child.on("close", (code) => {
+      if (code === 0) {
+
     const child = spawn(cmd, args);
     let output = "";
 
